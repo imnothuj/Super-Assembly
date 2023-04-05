@@ -1,0 +1,33 @@
+0 NOP - no operation
+1 JMP - Jump to Reg X
+2 JIZ - Jump (If Reg X is 0) To Reg Y
+3 SIM - Set Reg X to Y
+4 CALL - Call X with Reg Y
+5 RDR - Read Ram Cell RegX and save it to RegY
+6 ADD - RegX + RegY result in RegZ
+7 SUB - RegX - RegY result in RegZ
+8 WRR - Write to Ram Cell RegX with RegY
+9 HALT - HALT
+10 SHFR - shift REGX by amount RegY in Right Direction
+11 SHFL - shift RegX by amount RegY in Left Direction
+12 JIB - Jump to RegX if RegY > RegZ
+13 JIS - Jump to RegX if RegY < RegZ
+
+- call 1 is kernel (text)
+- call 2 is buzzer (sound 100hz - 1600hz)
+- call 3 is GPU (8 pixels for one call)
+- call 4 is GPU Resolution setting
+Resolutions:
+5. 64x128px
+4. 32x64px
+3. 16x32px
+2. 8x16px
+1. 4x8px
+
+DATA INFRASTRUCTURE:
+first set of bits is Instruction
+Second set of bits is RegX
+Third set of bits is RegY
+Fourth set of bits is RegZ
+
+WARGING: EACH BIT SET MUST BE EQAL OR HEXADECIMAL WILL BE INCORRECT
